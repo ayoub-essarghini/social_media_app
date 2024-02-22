@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.AddQuoteActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@drawable/roound_back"
+            android:onClick="btnBack"
+            android:paddingLeft="6dp"
+            android:src="@drawable/abck_icon_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_bold"
+            android:gravity="center"
+            android:text="إضافة خاطرة"
+            android:textColor="@color/font_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <EditText
+                android:id="@+id/txtQuote"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@drawable/txt_background"
+                android:gravity="top"
+                android:hint="ما الذي يخطر على بالك..."
+                android:inputType="textMultiLine"
+                android:layoutDirection="rtl"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="50dp" />
+
+            <Button
+                android:id="@+id/btn_add_quote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/like"
+                android:fontFamily="@font/cairo_bold"
+                android:padding="5dp"
+                android:text="إضافة"
+                android:textSize="20sp"
+                app:backgroundTint="@color/home" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

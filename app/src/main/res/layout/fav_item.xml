@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainanim"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F9F9F9"
+    android:orientation="vertical">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:elevation="30dp"
+        android:outlineSpotShadowColor="#050815"
+        android:padding="10dp"
+        android:alpha="0.8"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/quote_ic"/>
+
+                <TextView
+                    android:id="@+id/quote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/cairo_regular"
+                    android:gravity="right"
+                    android:justificationMode="inter_word"
+                    android:padding="15dp"
+                    android:text="عش حياتك كعابر سبيل واترك أثرا جميلا في نفوس الاخرين"
+                    android:textColor="#050815"
+                    android:textSize="19dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#4685B7"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_gravity="center"
+
+                android:orientation="horizontal"
+                >
+
+
+                <ImageView
+                    android:id="@+id/share_btn"
+                    android:layout_width="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="40dp"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/ic_baseline_share_24"
+                    app:tint="#4685B7" />
+
+                <ImageView
+                    android:id="@+id/copy_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/ic_copy"
+                    app:tint="#CD3E3E59" />
+                <ImageView
+                    android:id="@+id/msngr_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/msgre"
+                    app:tint="#4685B7" />
+                <ImageView
+                    android:id="@+id/wtsp_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/wtsp"
+                    app:tint="#CD3E3E59" />
+
+                <ImageView
+                    android:id="@+id/fav_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/ic_border_fav" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

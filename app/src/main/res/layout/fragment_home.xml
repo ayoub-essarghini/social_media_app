@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_home"
+    tools:context=".Fragments.HomeFragment"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/head_page"
+            android:background="@color/white"
+            android:padding="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/top_layout"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="30dp"
+                        app:cardCornerRadius="40dp"
+                        android:background="@android:color/transparent"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/like_20"
+                        android:layout_height="30dp"
+                        >
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/setting_icon" />
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="30dp"
+                        app:cardCornerRadius="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@android:color/transparent"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/home_20"
+                        android:layout_height="30dp"
+                        >
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/search_icon"
+                            app:tint="@color/home" />
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/app_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:gravity="right"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/cairo_bold"
+                    android:text=" خواطري"
+                    android:textColor="@color/profile"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_layout"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    app:cardCornerRadius="12dp"
+                    android:layout_gravity="center|center_vertical"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back_rounded_text"
+                        android:text="ما الذي يخطر على بالك..."
+                        android:layoutDirection="rtl"
+                        android:paddingTop="3dp"
+                        android:textColor="@color/font_color"
+                        android:paddingBottom="3dp"
+                        android:fontFamily="@font/cairo_medium"
+                        android:textSize="16sp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_profile_home"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    app:cardElevation="0dp"
+                    android:layout_alignParentRight="true"
+                    app:cardBackgroundColor="@color/gradien1_color"
+                    app:cardCornerRadius="50dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="@color/white"
+                        android:padding="5dp"
+                        app:cardElevation="0dp"
+                        app:cardCornerRadius="50dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|center_vertical"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="50dp">
+
+                            <ImageView
+                                android:id="@+id/img_profile_home"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/avatar" />
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/quotes_item"
+                android:id="@+id/quotes_recycler"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <RelativeLayout
+            android:id="@+id/empty_quote"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/folder"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/folder_img"
+                android:alpha="0.3"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" لا توجد منشورات !"
+                android:layout_below="@+id/folder"
+                android:fontFamily="@font/cairo_regular"
+                android:textSize="25sp"
+                android:textColor="@color/purple_500"
+                android:gravity="center"
+                android:padding="10dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

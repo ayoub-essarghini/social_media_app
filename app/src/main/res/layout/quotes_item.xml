@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp">
+
+                <ImageButton
+                    android:id="@+id/option_menu"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/baseline_more_vert_24"
+                    app:tint="@color/grey" />
+                <ImageButton
+                    android:id="@+id/add_to_fav"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/save_add"
+                   />
+
+                <TextView
+                    android:id="@+id/profile_name_quote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/cairo_medium"
+                    android:gravity="right"
+                    android:layout_marginTop="8dp"
+                    android:layoutDirection="rtl"
+                    android:paddingRight="8dp"
+                    android:text="Ayoub Es-sarghini"
+                    android:textColor="@color/font_color"
+                    android:textSize="14sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="5dp">
+
+                    <ImageView
+                        android:id="@+id/img_profile_quote"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/avatar" />
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:alpha="0.8"
+                    android:elevation="30dp"
+                    android:outlineSpotShadowColor="#050815"
+                    android:padding="0dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="27dp"
+                                android:scaleX="-1"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/quote_ic"
+                                app:tint="@color/gradien1_color" />
+
+                            <TextView
+                                android:id="@+id/quote_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/cairo_semibold"
+                                android:justificationMode="inter_word"
+                                android:paddingLeft="15dp"
+                                android:minHeight="70dp"
+                                android:gravity="top"
+                                android:layoutDirection="rtl"
+                                android:paddingRight="15dp"
+                                android:text="عش حياتك كعابر سبيل واترك أثرا جميلا في نفوس الاخرين"
+                                android:textColor="@color/font_color"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="right"
+                                android:scaleY="-1"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/quote_ic"
+                                app:tint="@color/gradien2_color" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#4685B7" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_share"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="114dp"
+                                app:cardElevation="0dp"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:clickable="true">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:id="@+id/share_text"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="1dp"
+                                        android:fontFamily="@font/cairo_bold"
+                                        android:text="مشاركة"
+                                        android:textColor="@color/notification"
+                                        android:textSize="11sp" />
+                                    <ImageView
+                                        android:id="@+id/share_btn"
+                                        android:layout_width="22dp"
+                                        android:layout_height="20dp"
+                                        android:padding="1dp"
+                                        android:layoutDirection="rtl"
+                                        android:src="@drawable/share"
+                                        app:tint="@color/notification" />
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/comment_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="8dp"
+                                app:cardElevation="0dp"
+                                >
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:id="@+id/text_comment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="1dp"
+                                        android:fontFamily="@font/cairo_bold"
+                                        android:text="0 تعليق"
+                                        android:textColor="@color/gradien2_color"
+                                        android:textSize="10dp" />
+
+                                    <ImageView
+
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:padding="3dp"
+                                        android:src="@drawable/comment_icon"
+                                        app:tint="@color/profile" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+                            <TextView
+                                android:id="@+id/text_likes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="1dp"
+                                android:fontFamily="@font/cairo_bold"
+                                android:text="0 إعجاب"
+                                android:textColor="@color/gradien1_color"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:id="@+id/fav_btn"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:padding="3dp"
+                                android:src="@drawable/ic_border_fav"
+                                app:tint="@color/gradien1_color" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
